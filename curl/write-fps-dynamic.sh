@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INFLUX_API_TOKEN=7gxRqwmM3VgwWU0jKgVYjW2NZEBeASmpFUXdp8235-DxVUSLlJbD5yvMSB5JJjHGmX7uIYt9lpAaG1uK57ilYA==
+INFLUX_API_TOKEN=wnkbA0w5G6jeWv0fJ6KAYj2NB9u7IpDwavixltFyAqjZn7kqK7L1A041PWLdofITt7kZUrc6ljEtNUmMKrNWRA==
 #TIMESTAMP=`date +%s%6N`
 TIMESTAMP=`date +%s`
 echo "TIMESTAMP: " $TIMESTAMP
@@ -8,7 +8,7 @@ FPS=$(shuf -i 10-15 -n1)
 echo "FPS: " $FPS
 
 sCommand="curl --request POST \
-       	\"http://192.168.5.222:8086/api/v2/write?org=AIC&bucket=bma&precision=s\" \
+	\"http://localhost:8086/api/v2/write?org=Nubtse&bucket=nubtse&precision=s\" \
   	--header \"Authorization: Token $INFLUX_API_TOKEN\" \
   	--header \"Content-Type: text/plain; charset=utf-8\" \
   	--header \"Accept: application/json\" \
