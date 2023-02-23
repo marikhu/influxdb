@@ -1,0 +1,8 @@
+{measurement" : "analytic","tags": {"project": "dmt","machine": "dmt1","container": "dmt_live-cam1","analytic": "TA"},"fields":{"fps": xx,"analyticEvents": xx}}
+
+
+analytic,project=dmt,machine=dmt1,container=dmt_live-cam1,analytic=TA fps=20,analyticEvents=1 <time_stamp>
+
+
+Example text to send:
+ analytic,project=bma,machine=BMA-PT1,container=bma_live-cam1,analytic=TA fps=12.4,analyticEvents=1 1677128108000000
