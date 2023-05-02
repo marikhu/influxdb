@@ -16,17 +16,20 @@ set(BOOST_LIBS ${Boost_THREAD_LIBRARY}
         ${Boost_CHRONO_LIBRARY})
 
 add_executable(logfps
-	src/LogFPS.cpp
+	src/main.cpp
+	src/FpsUploader.cpp
 	)
 
+MESSAGE("CMAKE_SOURCE_DIR: " ${CMAKE_SOURCE_DIR})
 
 target_include_directories(
 	logfps PRIVATE
 	${CURL_INCLUDE_DIRS}
+	${CMAKE_SOURCE_DIR}/src
 	)
 
 target_link_libraries(
-	logfps
+	logfps PRIVATE
 	${CURL_LIBRARIES}
 	)
 
